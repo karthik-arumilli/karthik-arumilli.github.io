@@ -8,27 +8,30 @@ const projects = [
   {
     title: "Sprint 1",
     cardImage: "https://d3ml3b6vywsj0z.cloudfront.net/company_images/605db33510fce904a7621c21_images.png",
-    description: "A quiz app built using basic react.",
+    pdf: "assets/pdfs/Sprint 1.pdf",
+    description: "My Sprint 1.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://www.canva.com/design/DAFiwcWcxI8/oPcNrUAHCVQV3E4iFNtQJg/view?utm_content=DAFiwcWcxI8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
-    Githublink: "",
+    Githublink: "https://studio.code.org/projects/applab/hmvWXoHY6a_xex0-sxnOHoSK2N6afQeAIeXIVwjXk1Q",
   },
   {
     title: "Sprint 2",
     cardImage: "https://storage.googleapis.com/pr-newsroom-wp/1/2018/12/Spotify_Holiday_Consumer_5.jpg",
-    description: "A chess engine for a popular game dev engine.",
+    pdf: "assets/pdfs/Sprint 2.pdf",
+    description: "My Sprint 2.",
     tagimg: "https://image.flaticon.com/icons/png/512/643/643350.png",
     Previewlink: "https://www.canva.com/design/DAFiwfqJwgc/sVriBnDwSAjpTjFJCPIrdQ/view?utm_content=DAFiwfqJwgc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
-    Githublink: "",
+    Githublink: "https://sxse-festival-wrapped.benjamindelia.repl.co/",
   },
-  // {
-  //   title: "Flappy Bird",
-  //   cardImage: "assets/images/project-page/flappybird.png",
-  //   description: "Flappy bird game built using React.js",
-  //   tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
-  //   Previewlink: "",
-  //   Githublink: "",
-  // },
+  {
+    title: "Sprint 3",
+    cardImage: "assets/images/sxse.png",
+    pdf: "assets/pdfs/Sprint 3.pdf",
+    description: "My Sprint 3.",
+    tagimg: "Home SXSE Wrapped.png",
+    Previewlink: "https://www.canva.com/design/DAFjk0KCcas/2fDedvwFWMU2Qaztu-sggA/view?utm_content=DAFjk0KCcas&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+    Githublink: "https://sxse-wrapped.nadirharper.repl.co/pages/p1.html?username=&password=",
+  },
   // {
   //   title: "Exercise Tracker",
   //   cardImage: "assets/images/project-page/exercise.jpg",
@@ -114,9 +117,9 @@ const projects = [
 // function for rendering project cards data
 const showCards = () => {
   let output = "";
-  projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
-    output += `       
-        <div class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
+  projects.forEach(({ title, cardImage, pdf, Previewlink, Githublink }) => {
+    output += `
+        <div id="proj-img" class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
           <div class="wrapper" style="background: url(${cardImage}) center / cover no-repeat;">
             <div class="header">
             </div>
@@ -126,13 +129,14 @@ const showCards = () => {
                 <h1 class="title"><a href="#">${title}</a></h1>
                 </div>
             <ul class="menu-content"><br>
-                  <li><a href="${Previewlink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
-                  <li><a href="${Githublink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
-                </ul>
+                  <li><a href="${pdf}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
+                  <li><a href="${Githublink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>                  
+                  </ul>
               </div>
             </div>
           </div>
-        </div>`;
+        </div>
+        `;
   });
   projectcards.innerHTML = output;
 };
